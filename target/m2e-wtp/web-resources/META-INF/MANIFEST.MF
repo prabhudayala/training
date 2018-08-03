@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: Employee_Management
-Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Administrator
-Implementation-Vendor-Id: org.employee
-Build-Jdk: 1.8.0_171
-Created-By: Maven Integration for Eclipse
-
