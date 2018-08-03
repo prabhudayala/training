@@ -22,6 +22,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<maven.build.timestamp.format>2018080201746467</maven.build.timestamp.format>
+
 	</properties>
 
 	<dependencies>
@@ -103,15 +105,23 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-				 <warSourceDirectory>WebContent</warSourceDirectory> 
-				 <failOnMissingWebXml>false</failOnMissingWebXml> 
-			
-					<!-- <webResources>
-						<resource>
-							this is relative to the pom.xml directory
-							<directory>resource2</directory>
-						</resource>
-					</webResources> -->
+					<warSourceDirectory>WebContent</warSourceDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+
+					<!-- <webResources> <resource> this is relative to the pom.xml directory 
+						<directory>resource2</directory> </resource> </webResources> -->
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-webapp-maven-plugin</artifactId>
+				<!-- Check latest version on Maven Central -->
+				<version>1.1.0</version>
+				<configuration>
+					<resourceGroup>maven-projects</resourceGroup>
+					<appName>app2</appName>
+					<deploymentType>war</deploymentType>
 				</configuration>
 			</plugin>
 
